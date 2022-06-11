@@ -27,10 +27,15 @@ class smsObject():
     def setQueueNum(self, val):
         self.queue_num = val
 
-    def sendMsg(self):
+    def sendMsg(self, is_init):
+        if is_init:
+            body = f'Starting up messages. You are currently {self.queue_num}.'
+        else:
+            body = f"Get ready to play! You are {self.queue_num} in line."
+
         message = self.client.messages \
                         .create(
-                            body=f"Get ready to play! You are {self.queue_num} in line.",
+                            body=body,
                             from_=self.from_phone,
                             to=self.to_phone
                         )
@@ -41,6 +46,6 @@ if __name__ == '__main__':
     notifier = smsObject()
     notifier.createClient()
     notifier.setQueueNum(200)
-    notifier.sendMsg()
+    notifier.sendMsg(True)
 
 
