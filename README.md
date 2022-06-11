@@ -37,7 +37,7 @@ Download from Tesseract [https://github.com/UB-Mannheim/tesseract/wiki](https://
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Run Lost Ark and take screenshot of the phrase "Your queue number".
+1. Run Lost Ark and take screenshot of the phrase "Your queue number" and save it as `waitingServer.JPG`.
 2. Run the program
   ```s
   python screen_reader.py
