@@ -26,5 +26,5 @@ if loc != None:
         if loc != None:
             img = pyautogui.screenshot(region = (loc.left + OFFSET_LEFT,loc.top, loc.width+ OFFSET_WIDTH,loc.height))
 else:
-    print('Waiting for Server text box not detected')
+    print("'Waiting for Server' text box not detected")
 
