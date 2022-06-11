@@ -29,7 +29,7 @@ class smsObject():
 
     def sendMsg(self, is_init):
         if is_init:
-            body = f'Starting up messages. You are currently {self.queue_num}.'
+            body = f'Starting up messages. You are currently {self.queue_num} in line.'
         else:
             body = f"Get ready to play! You are {self.queue_num} in line."
 

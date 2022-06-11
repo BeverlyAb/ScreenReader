@@ -21,7 +21,7 @@ if loc != None:
 
 
     # get queue number every sample
-    num_queue = float(pytesseract.image_to_string(ImageOps.grayscale(img)))
+    num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)))
     # instantiate twilio client
     notifier = smsObject()
     notifier.createClient()
@@ -32,7 +32,7 @@ if loc != None:
         time.sleep(SAMPLE_RATE_IN_SEC)
         if loc != None:
             img = pyautogui.screenshot(region = (loc.left + OFFSET_LEFT,loc.top, loc.width+ OFFSET_WIDTH,loc.height))
-            num_queue = float(pytesseract.image_to_string(ImageOps.grayscale(img)))
+            num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)))
             notifier.setQueueNum(num_queue)
     notifier.sendMsg(is_init=False)
         
