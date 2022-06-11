@@ -17,7 +17,8 @@ Create a token.txt file with the following id's and populate the X's with your v
 ### Prerequisites
 
 * Tesseract
- Download from Tesseract [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki). Ideally this should be saved under your Program Files.
+
+Download from Tesseract [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki). Ideally this should be saved under your Program Files.
 
 
 ### Installation
