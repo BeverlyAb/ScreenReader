@@ -5,10 +5,10 @@
 ## Getting Started
 To bypass creating environments, a token.txt file is needed.
 Create a token.txt file with the following id's and populate the X's with your values.
-TWILIO_ACCOUNT_SID XXXXXXXXXXXXXXXXXXXXXXXXX 
-TWILIO_AUTH_TOKEN XXXXXXXXXXXXXXXXXXXXXX
-FROM_PHONE +1XXXXXXX
-TO_PHONE +1XXXXXXX
+* TWILIO_ACCOUNT_SID XXXXXXXXXXXXXXXXXXXXXXXXX 
+* TWILIO_AUTH_TOKEN XXXXXXXXXXXXXXXXXXXXXX
+* FROM_PHONE +1XXXXXXX
+* TO_PHONE +1XXXXXXX
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -17,7 +17,7 @@ TO_PHONE +1XXXXXXX
 ### Prerequisites
 
 * Tesseract
- Download from [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki). Ideally this should be saved under your Program Files.
+ Download from Tesseract [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki). Ideally this should be saved under your Program Files.
 
 
 ### Installation
@@ -57,4 +57,5 @@ TO_PHONE +1XXXXXXX
 - [ ] Optional
     - [ ] Move Mouse software
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
