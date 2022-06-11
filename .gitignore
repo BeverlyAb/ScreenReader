@@ -3,3 +3,4 @@ token.txt
 __pycache__/send_sms.cpython-39.pyc
 __pycache__/discord_bot.cpython-39.pyc
 __pycache__/file_reader.cpython-39.pyc
+*.pyc
