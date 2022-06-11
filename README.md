@@ -4,7 +4,8 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 To bypass creating environments, a token.txt file is needed.
-Create a token.txt file with the following id's and populate the X's with your values.
+Create a token.txt file with the following id's and populate the X's with your values. _FROM_PHONE_ is the Twilio phone number _TO_PHONE_ is the subscriber.
+
 * TWILIO_ACCOUNT_SID XXXXXXXXXXXXXXXXXXXXXXXXX 
 * TWILIO_AUTH_TOKEN XXXXXXXXXXXXXXXXXXXXXX
 * FROM_PHONE +1XXXXXXX
