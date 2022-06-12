@@ -34,7 +34,7 @@ if loc != None:
             num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)).strip())
             notifier.setQueueNum(num_queue)
         
-        if DEBUG: print(num_queue)
+            if DEBUG: print(num_queue)
     
     if not DEBUG: notifier.sendMsg(is_init=False)   
             
