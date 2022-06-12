@@ -15,9 +15,6 @@ OFFSET_LEFT, OFFSET_WIDTH, SAMPLE_RATE_IN_SEC = 0, 0, 60*1
 loc = pyautogui.locateOnScreen('waitingServer.JPG', confidence=0.7)
 if loc != None:
     img = pyautogui.screenshot(region = loc)
-    # display number, if img looks good move on to sampling
-    plt.imshow(img)
-    plt.show()
     if pytesseract.image_to_string(ImageOps.grayscale(img)).strip().isdigit:
         num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)))
 
