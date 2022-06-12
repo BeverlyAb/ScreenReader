@@ -1,5 +1,5 @@
 # ScreenReader
- Reads queue number from Lost Ark and sends text notification when you are at the front of the line.
+ Reads queue number from Lost Ark and sends text notification when you are near the front of the line.
  
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -37,12 +37,15 @@ Download from Tesseract [https://github.com/UB-Mannheim/tesseract/wiki](https://
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Run Lost Ark and take screenshot of the phrase "Your queue number" and save it as `waitingServer.JPG`.
+1. Run Lost Ark and take screenshot of the queue number and save it as `waitingServer.JPG`. Do not close the screenshot yet. 
 2. Run the program
   ```s
   python screen_reader.py
   ```
-3. A screenshot will appear and if the queue number is successfully shown, an init message will be sent to _TO_PHONE_. Once your queue number is less than 100, you will receive the final notification indicating that it is almost game time.  
+  And close the screenshot image. 
+3. A new image will appear and if the queue number is successfully shown, an init message will be sent to _TO_PHONE_. Once your queue number is less than 100, you will receive the final notification indicating that it is almost game time.  
+
+![Example of `waitingServer.JPG`](waitingServer.JPG)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
