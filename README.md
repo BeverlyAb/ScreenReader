@@ -45,7 +45,8 @@ Download from Tesseract [https://github.com/UB-Mannheim/tesseract/wiki](https://
   And close the screenshot image. 
 3. A new image will appear and if the queue number is successfully shown, an init message will be sent to _TO_PHONE_. Once your queue number is less than 100, you will receive the final notification indicating that it is almost game time.  
 
-![Example of `waitingServer.JPG`](waitingServer.JPG "Example of `waitingServer.JPG`")
+![Example of `waitingServer.JPG`](waitingServer.JPG)
+"Example of `waitingServer.JPG`"
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
