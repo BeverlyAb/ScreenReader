@@ -47,7 +47,7 @@ If using Windows, download [Move Mouse software](https://apps.microsoft.com/stor
   python screen_reader.py
   ```
 
-3. If the program works, the number under _TO_PHONE_ will receive an initial notification. Once your queue number is less than 200, you will receive the final notification indicating that it is almost game time.  
+3. If the program works, the number under _TO_PHONE_ will receive an initial notification. Once your queue number is less than the QUEUE_THRESHOLD, you will receive the final notification indicating that it is almost game time.  
 
 4. Open Move Mouse and make sure the icon is not blocking the queue number and that the waiting for server textbox does not move. 
 
