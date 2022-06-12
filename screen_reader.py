@@ -6,7 +6,7 @@ import pytesseract
 from PIL import ImageOps
 from send_sms import smsObject
 
-DEBUG = False
+DEBUG = True
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 OFFSET_LEFT, OFFSET_WIDTH, SAMPLE_RATE_IN_SEC = 0, 0, 60*1
@@ -20,12 +20,12 @@ if loc != None:
     plt.show()
     if pytesseract.image_to_string(ImageOps.grayscale(img)).strip().isdigit:
         num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)))
-        
+
     # instantiate twilio client
     notifier = smsObject()
     notifier.createClient()
     notifier.setQueueNum(num_queue)
-    notifier.sendMsg(is_init=True)
+    if not DEBUG: notifier.sendMsg(is_init=True)
     
     if DEBUG: print(num_queue)
 
@@ -39,7 +39,7 @@ if loc != None:
         
         if DEBUG: print(num_queue)
     
-    notifier.sendMsg(is_init=False)   
+    if not DEBUG: notifier.sendMsg(is_init=False)   
             
 else:
     print("'Waiting for Server' text box not detected")
