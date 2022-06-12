@@ -6,16 +6,16 @@ import pytesseract
 from PIL import ImageOps
 from send_sms import smsObject
 
-DEBUG = True
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-OFFSET_LEFT, OFFSET_WIDTH, SAMPLE_RATE_IN_SEC = 0, 0, 60*1
+SAMPLE_RATE_IN_SEC, QUEUE_THRESHOLD = 60*1, 400
+DEBUG = True
 
 # get image location
 loc = pyautogui.locateOnScreen('waitingServer.JPG', confidence=0.7)
 if loc != None:
     img = pyautogui.screenshot(region = loc)
-    if pytesseract.image_to_string(ImageOps.grayscale(img)).strip().isdigit:
+    if pytesseract.image_to_string(ImageOps.grayscale(img)).strip().isdigit():
         num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)))
 
     # instantiate twilio client
@@ -28,10 +28,10 @@ if loc != None:
         print(num_queue)
 
     # get queue number every sample
-    while(num_queue > 200):
+    while(num_queue > QUEUE_THRESHOLD):
         time.sleep(SAMPLE_RATE_IN_SEC)
         img = pyautogui.screenshot(region = loc)
-        if pytesseract.image_to_string(ImageOps.grayscale(img)).strip().isdigit: 
+        if pytesseract.image_to_string(ImageOps.grayscale(img)).strip().isdigit(): 
             num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)).strip())
             notifier.setQueueNum(num_queue)
         
