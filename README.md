@@ -60,9 +60,7 @@ If using Windows, download [Move Mouse software](https://apps.microsoft.com/stor
 - [x] Continually reads the queue number every 10 min.
 - [x] Can send sms msg
 - [ ] Set path env
-- [ ] Schedule Lost Ark and Screen Reader
-- [ ] Optional
-    - [ ] Move Mouse software
+- [ ] Schedule Lost Ark, Screen Reader, and Move Mouse to activate at a specific time
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
