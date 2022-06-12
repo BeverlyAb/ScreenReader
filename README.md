@@ -19,6 +19,8 @@ Create a token.txt file with the following id's and populate the X's with your v
 
 Download from Tesseract [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki). Ideally this should be saved under your Program Files.
 
+If using Windows, download [Move Mouse software](https://apps.microsoft.com/store/detail/move-mouse/9NQ4QL59XLBF?hl=en-us&gl=US) in order to prevent the game from locking one out from being idle.
+
 
 ### Installation
 
@@ -37,14 +39,14 @@ Download from Tesseract [https://github.com/UB-Mannheim/tesseract/wiki](https://
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Run Lost Ark and take screenshot of the queue number and save it as `waitingServer.JPG`. Do not close the screenshot yet. 
-2. Run the program
+1. Run Lost Ark and take a screenshot of the queue number and save it as `waitingServer.JPG`. Do not close the screenshot yet. 
+2. Run the program with the command below and subsequently close the screenshot image.
   ```s
   python screen_reader.py
   ```
-  And close the screenshot image. 
-  
-3. A new image will appear and if the queue number is successfully shown, an init message will be sent to _TO_PHONE_. Once your queue number is less than 100, you will receive the final notification indicating that it is almost game time.  
+
+
+3. A new image will appear and if the queue number is successfully shown, an init message will be sent to _TO_PHONE_. Once your queue number is less than 200, you will receive the final notification indicating that it is almost game time.  
 
 
 Example of `waitingServer.JPG` ![Example of `waitingServer.JPG`](waitingServer.JPG)
