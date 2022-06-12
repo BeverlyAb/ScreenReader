@@ -39,18 +39,17 @@ If using Windows, download [Move Mouse software](https://apps.microsoft.com/stor
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Run Lost Ark and take a screenshot of the queue number and save it as `waitingServer.JPG`. Do not close the screenshot yet. 
+1. Run Lost Ark and take a screenshot of the queue number and save it as `waitingServer.JPG`. Do not close the screenshot yet. Example of `waitingServer.JPG` 
+![Example of `waitingServer.JPG`](waitingServer.JPG)
+
 2. Run the program with the command below and subsequently close the screenshot image.
   ```s
   python screen_reader.py
   ```
 
-
 3. A new image will appear and if the queue number is successfully shown, an init message will be sent to _TO_PHONE_. Once your queue number is less than 200, you will receive the final notification indicating that it is almost game time.  
 
-
-Example of `waitingServer.JPG` ![Example of `waitingServer.JPG`](waitingServer.JPG)
-
+4. Open Move Mouse and make sure the icon is not blocking the queue number and that the waiting for server textbox does not move. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
