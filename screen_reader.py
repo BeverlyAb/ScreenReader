@@ -16,7 +16,7 @@ loc = pyautogui.locateOnScreen('waitingServer.JPG', confidence=0.7)
 if loc != None:
     img = pyautogui.screenshot(region = loc)
     if pytesseract.image_to_string(ImageOps.grayscale(img)).strip().isdigit():
-        num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)))
+        num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)).strip())
 
     # instantiate twilio client
     notifier = smsObject()
