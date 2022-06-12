@@ -22,9 +22,10 @@ if loc != None:
     notifier = smsObject()
     notifier.createClient()
     notifier.setQueueNum(num_queue)
-    if not DEBUG: notifier.sendMsg(is_init=True)
-    
-    if DEBUG: print(num_queue)
+    if not DEBUG: 
+        notifier.sendMsg(is_init=True)
+    else: 
+        print(num_queue)
 
     # get queue number every sample
     while(num_queue > 200):
@@ -36,7 +37,8 @@ if loc != None:
         
             if DEBUG: print(num_queue)
     
-    if not DEBUG: notifier.sendMsg(is_init=False)   
+    if not DEBUG: 
+        notifier.sendMsg(is_init=False)   
             
 else:
     print("'Waiting for Server' text box not detected")
