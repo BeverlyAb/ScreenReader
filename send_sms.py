@@ -23,7 +23,6 @@ class smsObject():
         self.to_phone = read_token('TO_PHONE')
         self.client = Client(self.account_sid, self.auth_token)
 
-
     def setQueueNum(self, val):
         self.queue_num = val
 
