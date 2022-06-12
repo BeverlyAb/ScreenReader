@@ -27,15 +27,14 @@ if loc != None:
     notifier.createClient()
     notifier.setQueueNum(num_queue)
     notifier.sendMsg(is_init=True)
-    
-    while(num_queue < 100):
+    print(num_queue)
+    while(num_queue > 100):
         time.sleep(SAMPLE_RATE_IN_SEC)
         if loc != None:
             img = pyautogui.screenshot(region = (loc.left + OFFSET_LEFT,loc.top, loc.width+ OFFSET_WIDTH,loc.height))
             num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)))
             notifier.setQueueNum(num_queue)
-    notifier.sendMsg(is_init=False)
-        
+    notifier.sendMsg(is_init=False)   
             
 else:
     print("'Waiting for Server' text box not detected")
