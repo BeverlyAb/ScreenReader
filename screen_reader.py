@@ -8,7 +8,7 @@ from send_sms import smsObject
 
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-SAMPLE_RATE_IN_SEC, QUEUE_THRESHOLD = 60*1, 400
+SAMPLE_RATE_IN_SEC, QUEUE_THRESHOLD = 60*1, 450
 DEBUG = True
 
 # get image location
@@ -31,11 +31,14 @@ if loc != None:
     while(num_queue > QUEUE_THRESHOLD):
         time.sleep(SAMPLE_RATE_IN_SEC)
         img = pyautogui.screenshot(region = loc)
-        if pytesseract.image_to_string(ImageOps.grayscale(img)).strip().isdigit(): 
-            num_queue = int(pytesseract.image_to_string(ImageOps.grayscale(img)).strip())
-            notifier.setQueueNum(num_queue)
+        tmp_queue = pytesseract.image_to_string(ImageOps.grayscale(img)).strip()
+        if tmp_queue.isdigit():
+            tmp_queue = int(tmp_queue) 
+            if tmp_queue < num_queue: 
+                num_queue = tmp_queue
+                notifier.setQueueNum(num_queue)
         
-            if DEBUG: print(num_queue)
+                if DEBUG: print(num_queue)
     
     if not DEBUG: 
         notifier.sendMsg(is_init=False)   
